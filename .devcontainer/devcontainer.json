@@ -1,0 +1,11 @@
+{
+    "name": "Secure Payment Platform Dev",
+    "dockerFile": "Dockerfile",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        "ms-python.python",
+        "hashicorp.terraform",
+        "ms-azuretools.vscode-docker"
+    ],
+    "remoteUser": "vscode"
+}
