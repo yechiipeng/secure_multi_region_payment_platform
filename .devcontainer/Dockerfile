@@ -11,11 +11,13 @@ RUN apt-get update && apt-get install -y wget unzip curl gnupg software-properti
     && ./aws/install \
     && apt-get install -y trivy
 
-# Create a workspace folder that vscode user can write to
-RUN mkdir -p /workspace && chown -R vscode:vscode /workspace
 
-# Switch to vscode user
+
+
+# Create /workspace folder and make vscode user own it
+RUN mkdir -p /workspace \
+    && chown -R vscode:vscode /workspace
+
+# Use non-root user for all operations
 USER vscode
-
-# Set default workspace folder
 WORKDIR /workspace
